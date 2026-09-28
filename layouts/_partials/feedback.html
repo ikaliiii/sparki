@@ -1,0 +1,30 @@
+<section class="page-feedback" data-page-feedback data-page-id="{{ .RelPermalink }}" aria-labelledby="page-feedback-question">
+  <p class="page-feedback__question" id="page-feedback-question">Was this page useful?</p>
+  <div class="page-feedback__right">
+    <div class="page-feedback__actions" role="group" aria-label="Page feedback">
+      <button class="feedback-btn" type="button" data-feedback-value="yes">Yes</button>
+      <button class="feedback-btn" type="button" data-feedback-value="no">No</button>
+    </div>
+    <p class="page-feedback__thanks" data-feedback-thanks role="status" aria-live="polite" hidden>Thanks for the feedback.</p>
+  </div>
+</section>
+<script>
+  (() => {
+    const widget = document.querySelector('[data-page-feedback][data-page-id="{{ .RelPermalink }}"]');
+    if (!widget) return;
+    const storageKey = `sparki-feedback:${widget.dataset.pageId}`;
+    const thanks = widget.querySelector('[data-feedback-thanks]');
+    widget.querySelectorAll('[data-feedback-value]').forEach((button) => {
+      button.addEventListener('click', () => {
+        try {
+          localStorage.setItem(storageKey, button.dataset.feedbackValue);
+        } catch (_) {
+          // Feedback still works visually when storage is unavailable.
+        }
+        widget.querySelector('[data-feedback-value="yes"]').disabled = true;
+        widget.querySelector('[data-feedback-value="no"]').disabled = true;
+        thanks.hidden = false;
+      });
+    });
+  })();
+</script>
