@@ -2,7 +2,7 @@
 title: "Accelerator / Chamber"
 ---
 
-**Status:** Illustrative
+{{< sparki/status "ILLUSTRATIVE" >}}
 
 ## Context
 

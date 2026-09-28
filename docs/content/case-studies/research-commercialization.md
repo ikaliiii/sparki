@@ -2,7 +2,7 @@
 title: "Research Commercialization"
 ---
 
-**Status:** Illustrative
+{{< sparki/status "ILLUSTRATIVE" >}}
 
 ## Context
 

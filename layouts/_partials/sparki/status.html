@@ -1,0 +1,2 @@
+{{- $status := .status | default "UNRESOLVED" -}}
+<span class="sparki-status sparki-status-{{ lower (replace $status " " "-") }}">{{ $status }}</span>

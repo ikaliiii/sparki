@@ -9,4 +9,5 @@ These starter cases are **Illustrative**. They are templates for adding observed
 {{< card link="accelerator-chamber" title="Accelerator / Chamber" subtitle="Illustrative network coordination." >}}
 {{< card link="research-commercialization" title="Research Commercialization" subtitle="Illustrative translation pathway." >}}
 {{< card link="workforce-economic-development" title="Workforce / Economic Development" subtitle="Illustrative regional opportunity." >}}
+{{< card link="future-pilot-cases" title="Future Pilot Cases" subtitle="A safe template for observed cases." >}}
 {{< /cards >}}

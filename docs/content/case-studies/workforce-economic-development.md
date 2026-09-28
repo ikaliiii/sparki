@@ -2,7 +2,7 @@
 title: "Workforce / Economic Development"
 ---
 
-**Status:** Illustrative
+{{< sparki/status "ILLUSTRATIVE" >}}
 
 ## Context
 

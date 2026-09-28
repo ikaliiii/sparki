@@ -2,6 +2,19 @@
 title: "Real MVP"
 ---
 
+{{< sparki/evidence status="PROTOTYPED" >}}
+The MVP is a recommendation for a small, auditable workflow. It is not a claim that the workflow has been validated or deployed.
+{{< /sparki/evidence >}}
+
+## MVP Purpose
+
+Test whether intent-first, consented introductions create useful next actions for a defined audience.
+
+## Primary User and Buyer
+
+- **Primary user:** a participant with a specific collaboration need.
+- **Primary buyer:** an organization operating a network, program, or opportunity pipeline.
+
 ## Must-Have Workflow
 
 1. A participant creates an intent record.
@@ -38,4 +51,4 @@ Broad discovery, reputation scoring, complex recommendation systems, and unatten
 
 ## Success Metrics
 
-Pilot targets should measure qualified collisions, reciprocal interest, consented introductions, completed meetings, and useful outcomes. Baselines remain unresolved.
+Pilot targets should measure qualified collisions, reciprocal interest, consented introductions, completed meetings, defined next actions, Day 7 outcomes, and Day 21 outcomes. Baselines remain unresolved.

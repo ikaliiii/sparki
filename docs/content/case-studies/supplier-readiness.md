@@ -2,7 +2,7 @@
 title: "Supplier Readiness"
 ---
 
-**Status:** Illustrative
+{{< sparki/status "ILLUSTRATIVE" >}}
 
 ## Context
 

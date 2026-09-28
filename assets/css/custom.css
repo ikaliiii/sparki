@@ -157,6 +157,64 @@ body {
 	line-height: 1.5;
 }
 
+.sparki-evidence-card {
+	margin: 2rem 0;
+	border: 1px solid rgb(203 213 225 / 80%);
+	border-left: 4px solid var(--sparki-sun);
+	border-radius: 0.5rem;
+	background: var(--sparki-mist);
+	box-shadow: 0 1px 3px rgb(15 23 42 / 6%);
+}
+
+.sparki-evidence-card-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	border-bottom: 1px solid rgb(203 213 225 / 60%);
+	padding: 0.75rem 1rem;
+}
+
+.sparki-evidence-card-body {
+	padding: 1rem;
+	color: #334155;
+}
+
+.sparki-evidence-card-body p:first-child {
+	margin-top: 0;
+}
+
+.sparki-status {
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid currentColor;
+	border-radius: 999px;
+	padding: 0.2rem 0.55rem;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	font-size: 0.6875rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.sparki-status-observed,
+.sparki-status-verified-context {
+	color: #18734d;
+}
+
+.sparki-status-prototyped,
+.sparki-status-in-progress,
+.sparki-status-pilot-target {
+	color: #9a6700;
+}
+
+.sparki-status-illustrative,
+.sparki-status-hypothesis,
+.sparki-status-unresolved {
+	color: #a44832;
+}
+
 .dark body {
 	background: #10232b;
 	color: #f1f5f9;
@@ -181,6 +239,19 @@ body {
 
 .dark .sparki-evidence {
 	background: rgb(255 255 255 / 10%);
+}
+
+.dark .sparki-evidence-card {
+	border-color: rgb(255 255 255 / 10%);
+	background: rgb(255 255 255 / 5%);
+}
+
+.dark .sparki-evidence-card-header {
+	border-color: rgb(255 255 255 / 10%);
+}
+
+.dark .sparki-evidence-card-body {
+	color: #cbd5e1;
 }
 
 @media (min-width: 640px) {
