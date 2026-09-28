@@ -1,15 +1,80 @@
-body {
-	letter-spacing: -0.01em;
+@theme {
+	--color-sparki-ink: #173042;
+	--color-sparki-mist: #f2f7f5;
+	--color-sparki-coral: #e86f51;
+	--color-sparki-sun: #f3c969;
 }
 
-.sparki-meta {
-	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: 0.75rem;
+@layer base {
+	body {
+		@apply hx:bg-[#f8faf8] hx:text-sparki-ink hx:dark:bg-[#10232b] hx:dark:text-slate-100;
+		letter-spacing: -0.01em;
+	}
+
+	.content {
+		@apply hx:max-w-4xl;
+	}
 }
 
-.sparki-evidence {
-	border-left: 3px solid currentColor;
-	padding-left: 1rem;
+@layer components {
+	.sparki-home {
+		@apply hx:mx-auto hx:max-w-5xl hx:px-2 hx:pb-16 hx:md:px-8;
+	}
+
+	.sparki-hero {
+		@apply hx:relative hx:overflow-hidden hx:rounded-2xl hx:border hx:border-slate-200/80 hx:bg-white hx:px-6 hx:py-12 hx:shadow-sm hx:sm:px-10 hx:md:py-16 hx:dark:border-white/10 hx:dark:bg-white/5;
+	}
+
+	.sparki-hero::after {
+		content: "";
+		@apply hx:absolute hx:-right-16 hx:-top-20 hx:h-56 hx:w-56 hx:rounded-full hx:bg-sparki-sun/35 hx:blur-3xl hx:dark:bg-sparki-coral/20;
+	}
+
+	.sparki-hero h1 {
+		@apply hx:relative hx:z-10 hx:mt-4 hx:max-w-2xl hx:text-4xl hx:font-semibold hx:tracking-tight hx:text-sparki-ink hx:sm:text-5xl hx:dark:text-white;
+	}
+
+	.sparki-lede {
+		@apply hx:relative hx:z-10 hx:mt-6 hx:max-w-2xl hx:text-lg hx:leading-8 hx:text-slate-600 hx:dark:text-slate-300;
+	}
+
+	.sparki-meta {
+		@apply hx:font-mono hx:text-xs hx:font-semibold hx:uppercase hx:tracking-[0.14em] hx:text-sparki-coral;
+	}
+
+	.sparki-hero-actions {
+		@apply hx:relative hx:z-10 hx:mt-8 hx:flex hx:flex-wrap hx:gap-3;
+	}
+
+	.sparki-button {
+		@apply hx:inline-flex hx:items-center hx:rounded-lg hx:border hx:border-slate-300 hx:px-4 hx:py-2.5 hx:text-sm hx:font-semibold hx:no-underline hx:transition hx:hover:-translate-y-0.5 hx:hover:border-sparki-coral hx:focus-visible:ring-2 hx:focus-visible:ring-sparki-coral hx:dark:border-white/20;
+	}
+
+	.sparki-button-primary {
+		@apply hx:border-sparki-coral hx:bg-sparki-coral hx:text-white hx:hover:bg-[#d85f43];
+	}
+
+	.sparki-section-heading {
+		@apply hx:mt-16 hx:max-w-2xl;
+	}
+
+	.sparki-section-heading h2 {
+		@apply hx:mt-3 hx:border-0 hx:text-3xl hx:font-semibold hx:text-sparki-ink hx:dark:text-white;
+	}
+
+	.sparki-section-heading p:last-child {
+		@apply hx:mt-3 hx:text-slate-600 hx:dark:text-slate-300;
+	}
+
+	.sparki-home .hextra-cards {
+		@apply hx:mt-8;
+	}
+
+	.sparki-home .hextra-card {
+		@apply hx:border-slate-200/80 hx:bg-white/80 hx:shadow-sm hx:transition hx:hover:-translate-y-1 hx:hover:border-sparki-coral/60 hx:hover:shadow-md hx:dark:border-white/10 hx:dark:bg-white/5;
+	}
+
+	.sparki-evidence {
+		@apply hx:mt-10 hx:border-l-4 hx:border-sparki-sun hx:bg-sparki-mist hx:px-5 hx:py-4 hx:text-sm hx:leading-6 hx:text-slate-700 hx:dark:bg-white/10 hx:dark:text-slate-200;
+	}
 }
