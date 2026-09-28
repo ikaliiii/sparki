@@ -1,0 +1,15 @@
+body {
+	letter-spacing: -0.01em;
+}
+
+.sparki-meta {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-size: 0.75rem;
+}
+
+.sparki-evidence {
+	border-left: 3px solid currentColor;
+	padding-left: 1rem;
+}

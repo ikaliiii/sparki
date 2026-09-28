@@ -1,10 +1,9 @@
 ---
-title: "Blog"
+title: "Field Notes"
 ---
 
-<div style="text-align: center; margin-top: 1em;">
-{{< hextra/hero-badge link="index.xml" >}}
-  <span>RSS Feed</span>
-  {{< icon name="rss" attributes="height=14" >}}
-{{< /hextra/hero-badge >}}
-</div>
+Working notes about what Sparki is testing, learning, and deciding.
+
+{{< cards >}}
+{{< card link="what-sparki-is-testing" title="What Sparki Is Testing" subtitle="The current product questions." >}}
+{{< /cards >}}
