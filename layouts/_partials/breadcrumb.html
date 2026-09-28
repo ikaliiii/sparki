@@ -1,17 +1,22 @@
 {{- $page := .page -}}
 {{- $enable := .enable -}}
-{{- if (default $enable $page.Params.breadcrumbs) -}}
-  <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
+{{- if isset $page.Params "breadcrumbs" -}}
+  {{- $enable = $page.Params.breadcrumbs -}}
+{{- end -}}
+{{- if $enable -}}
+  <nav aria-label="Breadcrumb" class="hx:mt-1.5 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
+    <ol class="hx:flex hx:items-center hx:gap-1">
     {{- range $page.Ancestors.Reverse }}
       {{- if not .IsHome }}
-        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
-          <a href="{{ .RelPermalink }}" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">{{- partial "utils/title" . -}}</a>
-        </div>
-        {{- partial "utils/icon.html" (dict "name" "chevron-right" "attributes" "class=\"hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180\"") -}}
+        <li class="hx:flex hx:min-w-0 hx:items-center hx:gap-1">
+          <a href="{{ .RelPermalink }}" class="hx:inline-block hx:min-w-0 hx:truncate hx:rounded-sm hx:hextra-focus-visible-inset hx:hover:text-gray-900 hx:dark:hover:text-gray-100">{{- partial "utils/title" . -}}</a>
+          {{- partial "utils/icon.html" (dict "name" "chevron-right" "attributes" "class=\"hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180\"") -}}
+        </li>
       {{ end -}}
     {{ end -}}
-    <div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">
+    <li aria-current="page" class="hx:min-w-0 hx:truncate hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">
       {{- partial "utils/title" $page -}}
-    </div>
-  </div>
+    </li>
+    </ol>
+  </nav>
 {{ end -}}
