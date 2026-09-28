@@ -28,50 +28,85 @@ enableInlineShortcodes: true
 
 menu:
   main:
-    - name: Home
+    - identifier: home
+      name: Home
       pageRef: /
       weight: 1
-    - name: Start Here
-      pageRef: /docs/start-here
+    - identifier: docs
+      name: Docs
       weight: 2
-    - name: Product
+    - identifier: start-here
+      name: Start Here
+      pageRef: /docs/start-here
+      parent: docs
+      weight: 1
+    - identifier: product
+      name: Product
       pageRef: /docs/product
-      weight: 3
-    - name: Final Site
+      parent: docs
+      weight: 2
+    - identifier: final-site
+      name: Final Site
       pageRef: /docs/final-site
-      weight: 4
-    - name: Research & Validation
+      parent: docs
+      weight: 3
+    - identifier: validation
+      name: Research & Validation
       pageRef: /docs/validation
-      weight: 5
-    - name: Case Studies
+      parent: docs
+      weight: 4
+    - identifier: explore
+      name: Explore
+      weight: 3
+    - identifier: case-studies
+      name: Case Studies
       pageRef: /case-studies
-      weight: 6
-    - name: Audiences & Use Cases
+      parent: explore
+      weight: 1
+    - identifier: audiences
+      name: Audiences & Use Cases
       pageRef: /docs/audiences
-      weight: 7
-    - name: Decisions
+      parent: explore
+      weight: 2
+    - identifier: delivery
+      name: Delivery
+      weight: 4
+    - identifier: decisions
+      name: Decisions
       pageRef: /docs/decisions
-      weight: 8
-    - name: Real MVP
+      parent: delivery
+      weight: 1
+    - identifier: mvp
+      name: Real MVP
       pageRef: /docs/mvp
-      weight: 9
-    - name: Backend & Data
+      parent: delivery
+      weight: 2
+    - identifier: backend
+      name: Backend & Data
       pageRef: /docs/backend
-      weight: 10
-    - name: Roadmap
+      parent: delivery
+      weight: 3
+    - identifier: roadmap
+      name: Roadmap
       pageRef: /docs/roadmap
-      weight: 11
-    - name: Go-to-Market
+      parent: delivery
+      weight: 4
+    - identifier: go-to-market
+      name: Go-to-Market
       pageRef: /docs/go-to-market
-      weight: 12
-    - name: Field Notes
+      parent: delivery
+      weight: 5
+    - identifier: field-notes
+      name: Field Notes
       pageRef: /blog
-      weight: 13
-    - name: Artifacts
+      weight: 5
+    - identifier: artifacts
+      name: Artifacts
       pageRef: /docs/artifacts
-      weight: 14
-    - name: Search
-      weight: 15
+      weight: 6
+    - identifier: search
+      name: Search
+      weight: 7
       params:
         type: search
 

@@ -6,6 +6,15 @@ title: "Start Here"
 
 This is the starting point for the Sparki product handoff. Add source material here as it becomes available.
 
+## Recommended Path
+
+1. Read [Product](/docs/product/) to understand the intent-first workflow.
+2. Read [Research & Validation](/docs/validation/) to separate evidence from open questions.
+3. Review [Decisions](/docs/decisions/) to see what is being built, revised, deferred, or tested.
+4. Use [Real MVP](/docs/mvp/) and [Backend & Data](/docs/backend/) as the implementation handoff.
+
+The homepage is the orientation layer. The sidebar is the working index. Search is the fastest way to find a term, artifact, or evidence record.
+
 ## How to Read This Site
 
 - **Observed:** directly recorded evidence.
