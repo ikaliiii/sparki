@@ -41,6 +41,7 @@
         {{- if gt $paginator.TotalPages 1 -}}
           {{ partial "components/blog-pager.html" $paginator }}
         {{- end -}}
+        {{ partial "feedback.html" . }}
         {{ partial "custom/page-end.html" . }}
       </main>
     </article>

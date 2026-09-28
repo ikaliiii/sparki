@@ -47,6 +47,7 @@
           {{ partial "custom/content-end.html" . }}
         </div>
         {{- partial "components/last-updated.html" . -}}
+        {{- partial "feedback.html" . -}}
         {{- if (site.Params.blog.article.displayPagination | default true) -}}
           {{- .Store.Set "reversePagination" (.Params.reversePagination | default true) -}}
           {{- partial "components/pager.html" . -}}
