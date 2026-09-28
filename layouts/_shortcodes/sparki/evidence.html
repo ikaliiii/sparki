@@ -1,0 +1,6 @@
+{{- $status := .Get "status" | default "UNRESOLVED" -}}
+{{- $text := .Inner | markdownify -}}
+<aside class="sparki-evidence-card">
+  <div class="sparki-evidence-card-header"><span class="sparki-meta">Evidence status</span>{{ partial "sparki/status.html" (dict "status" $status) }}</div>
+  <div class="sparki-evidence-card-body">{{ $text }}</div>
+</aside>

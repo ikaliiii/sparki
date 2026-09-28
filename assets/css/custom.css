@@ -1,80 +1,195 @@
-@theme {
-	--color-sparki-ink: #173042;
-	--color-sparki-mist: #f2f7f5;
-	--color-sparki-coral: #e86f51;
-	--color-sparki-sun: #f3c969;
+:root {
+	--sparki-ink: #173042;
+	--sparki-mist: #f2f7f5;
+	--sparki-coral: #e86f51;
+	--sparki-sun: #f3c969;
 }
 
-@layer base {
-	body {
-		@apply hx:bg-[#f8faf8] hx:text-sparki-ink hx:dark:bg-[#10232b] hx:dark:text-slate-100;
-		letter-spacing: -0.01em;
-	}
-
-	.content {
-		@apply hx:max-w-4xl;
-	}
+body {
+	background: #f8faf8;
+	color: var(--sparki-ink);
+	letter-spacing: -0.01em;
 }
 
-@layer components {
+.content {
+	max-width: 64rem;
+}
+
+.sparki-home {
+	max-width: 64rem;
+	margin: 0 auto;
+	padding: 0 0.5rem 4rem;
+}
+
+.sparki-hero {
+	position: relative;
+	overflow: hidden;
+	padding: 3rem 1.5rem;
+	border: 1px solid rgb(203 213 225 / 80%);
+	border-radius: 1rem;
+	background: #fff;
+	box-shadow: 0 1px 3px rgb(15 23 42 / 8%);
+}
+
+.sparki-hero::after {
+	position: absolute;
+	top: -5rem;
+	right: -4rem;
+	width: 14rem;
+	height: 14rem;
+	border-radius: 999px;
+	background: rgb(243 201 105 / 35%);
+	content: "";
+	filter: blur(3rem);
+}
+
+.sparki-hero h1 {
+	position: relative;
+	z-index: 1;
+	max-width: 42rem;
+	margin: 1rem 0 0;
+	color: var(--sparki-ink);
+	font-size: clamp(2.25rem, 6vw, 3.75rem);
+	font-weight: 600;
+	letter-spacing: -0.04em;
+	line-height: 1.05;
+}
+
+.sparki-lede {
+	position: relative;
+	z-index: 1;
+	max-width: 42rem;
+	margin: 1.5rem 0 0;
+	color: #475569;
+	font-size: 1.125rem;
+	line-height: 1.75;
+}
+
+.sparki-meta {
+	color: var(--sparki-coral);
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.sparki-hero-actions {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 2rem;
+}
+
+.sparki-button {
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid #cbd5e1;
+	border-radius: 0.5rem;
+	padding: 0.625rem 1rem;
+	color: var(--sparki-ink);
+	font-size: 0.875rem;
+	font-weight: 600;
+	text-decoration: none !important;
+	transition: 160ms ease;
+}
+
+.sparki-button:hover {
+	border-color: var(--sparki-coral);
+	transform: translateY(-2px);
+}
+
+.sparki-button:focus-visible {
+	outline: 2px solid var(--sparki-coral);
+	outline-offset: 2px;
+}
+
+.sparki-button-primary {
+	border-color: var(--sparki-coral);
+	background: var(--sparki-coral);
+	color: #fff;
+}
+
+.sparki-section-heading {
+	max-width: 42rem;
+	margin-top: 4rem;
+}
+
+.sparki-section-heading h2 {
+	margin: 0.75rem 0 0;
+	border: 0;
+	color: var(--sparki-ink);
+	font-size: 1.875rem;
+	font-weight: 600;
+}
+
+.sparki-section-heading p:last-child {
+	margin-top: 0.75rem;
+	color: #475569;
+}
+
+.sparki-home .hextra-cards {
+	margin-top: 2rem;
+}
+
+.sparki-home .hextra-card {
+	border-color: rgb(203 213 225 / 80%);
+	background: rgb(255 255 255 / 80%);
+	box-shadow: 0 1px 3px rgb(15 23 42 / 8%);
+	transition: 160ms ease;
+}
+
+.sparki-home .hextra-card:hover {
+	border-color: rgb(232 111 81 / 60%);
+	box-shadow: 0 8px 24px rgb(15 23 42 / 10%);
+	transform: translateY(-4px);
+}
+
+.sparki-evidence {
+	margin-top: 2.5rem;
+	border-left: 4px solid var(--sparki-sun);
+	padding: 1rem 1.25rem;
+	background: var(--sparki-mist);
+	color: #334155;
+	font-size: 0.875rem;
+	line-height: 1.5;
+}
+
+.dark body {
+	background: #10232b;
+	color: #f1f5f9;
+}
+
+.dark .sparki-hero,
+.dark .sparki-home .hextra-card {
+	border-color: rgb(255 255 255 / 10%);
+	background: rgb(255 255 255 / 5%);
+}
+
+.dark .sparki-hero h1,
+.dark .sparki-section-heading h2 {
+	color: #fff;
+}
+
+.dark .sparki-lede,
+.dark .sparki-section-heading p:last-child,
+.dark .sparki-evidence {
+	color: #cbd5e1;
+}
+
+.dark .sparki-evidence {
+	background: rgb(255 255 255 / 10%);
+}
+
+@media (min-width: 640px) {
 	.sparki-home {
-		@apply hx:mx-auto hx:max-w-5xl hx:px-2 hx:pb-16 hx:md:px-8;
+		padding-right: 2rem;
+		padding-left: 2rem;
 	}
 
 	.sparki-hero {
-		@apply hx:relative hx:overflow-hidden hx:rounded-2xl hx:border hx:border-slate-200/80 hx:bg-white hx:px-6 hx:py-12 hx:shadow-sm hx:sm:px-10 hx:md:py-16 hx:dark:border-white/10 hx:dark:bg-white/5;
-	}
-
-	.sparki-hero::after {
-		content: "";
-		@apply hx:absolute hx:-right-16 hx:-top-20 hx:h-56 hx:w-56 hx:rounded-full hx:bg-sparki-sun/35 hx:blur-3xl hx:dark:bg-sparki-coral/20;
-	}
-
-	.sparki-hero h1 {
-		@apply hx:relative hx:z-10 hx:mt-4 hx:max-w-2xl hx:text-4xl hx:font-semibold hx:tracking-tight hx:text-sparki-ink hx:sm:text-5xl hx:dark:text-white;
-	}
-
-	.sparki-lede {
-		@apply hx:relative hx:z-10 hx:mt-6 hx:max-w-2xl hx:text-lg hx:leading-8 hx:text-slate-600 hx:dark:text-slate-300;
-	}
-
-	.sparki-meta {
-		@apply hx:font-mono hx:text-xs hx:font-semibold hx:uppercase hx:tracking-[0.14em] hx:text-sparki-coral;
-	}
-
-	.sparki-hero-actions {
-		@apply hx:relative hx:z-10 hx:mt-8 hx:flex hx:flex-wrap hx:gap-3;
-	}
-
-	.sparki-button {
-		@apply hx:inline-flex hx:items-center hx:rounded-lg hx:border hx:border-slate-300 hx:px-4 hx:py-2.5 hx:text-sm hx:font-semibold hx:no-underline hx:transition hx:hover:-translate-y-0.5 hx:hover:border-sparki-coral hx:focus-visible:ring-2 hx:focus-visible:ring-sparki-coral hx:dark:border-white/20;
-	}
-
-	.sparki-button-primary {
-		@apply hx:border-sparki-coral hx:bg-sparki-coral hx:text-white hx:hover:bg-[#d85f43];
-	}
-
-	.sparki-section-heading {
-		@apply hx:mt-16 hx:max-w-2xl;
-	}
-
-	.sparki-section-heading h2 {
-		@apply hx:mt-3 hx:border-0 hx:text-3xl hx:font-semibold hx:text-sparki-ink hx:dark:text-white;
-	}
-
-	.sparki-section-heading p:last-child {
-		@apply hx:mt-3 hx:text-slate-600 hx:dark:text-slate-300;
-	}
-
-	.sparki-home .hextra-cards {
-		@apply hx:mt-8;
-	}
-
-	.sparki-home .hextra-card {
-		@apply hx:border-slate-200/80 hx:bg-white/80 hx:shadow-sm hx:transition hx:hover:-translate-y-1 hx:hover:border-sparki-coral/60 hx:hover:shadow-md hx:dark:border-white/10 hx:dark:bg-white/5;
-	}
-
-	.sparki-evidence {
-		@apply hx:mt-10 hx:border-l-4 hx:border-sparki-sun hx:bg-sparki-mist hx:px-5 hx:py-4 hx:text-sm hx:leading-6 hx:text-slate-700 hx:dark:bg-white/10 hx:dark:text-slate-200;
+		padding: 4rem 2.5rem;
 	}
 }

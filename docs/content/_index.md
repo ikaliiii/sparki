@@ -5,9 +5,10 @@ layout: hextra-home
 
 <div class="sparki-home">
 	<div class="sparki-hero">
-		<p class="sparki-meta">Working v1 · Product handoff</p>
+		<p class="sparki-meta">September 1 - November 5, 2026 · Product handoff</p>
 		<h1>Sparki Documentation</h1>
-		<p class="sparki-lede">A focused home for product definition, evidence, qualified introductions, and the first production workflow.</p>
+		<h2>Pre-MVP Validation &amp; Product Handoff</h2>
+		<p class="sparki-lede">The unified record of the Sparki engagement: what was defined, what was tested, what remains unresolved, and what should be built next.</p>
 		<div class="sparki-hero-actions">
 			<a class="sparki-button sparki-button-primary" href="/docs/start-here/">Start here</a>
 			<a class="sparki-button" href="/docs/mvp/">See the real MVP</a>
@@ -21,12 +22,13 @@ layout: hextra-home
 	</div>
 
 	{{< cards >}}
-	{{< card link="/docs/product/" title="Product Overview" subtitle="Intent over identity. Evidence over assertion. Action over browsing." >}}
-	{{< card link="/docs/validation/" title="Research & Validation" subtitle="Research areas, evidence status, and open questions." >}}
-	{{< card link="/case-studies/" title="Case Studies" subtitle="Illustrative applications, clearly separated from observed pilots." >}}
+	{{< card link="/docs/product/" title="Product" subtitle="The thesis, workflow, and product language." >}}
+	{{< card link="/docs/validation/" title="Validation" subtitle="Surveys, interviews, tests, friction, and evidence status." >}}
+	{{< card link="/case-studies/" title="Case Studies" subtitle="Observed, illustrative, and future pilot cases." >}}
+	{{< card link="/docs/decisions/" title="Decisions" subtitle="The decision ledger and next actions." >}}
 	{{< card link="/docs/mvp/" title="Real MVP" subtitle="The smallest useful production workflow." >}}
-	{{< card link="/docs/backend/" title="Backend & Data" subtitle="Records, consent states, events, and auditability." >}}
-	{{< card link="/blog/" title="Field Notes" subtitle="Short notes on what Sparki is testing and learning." >}}
+	{{< card link="/docs/backend/" title="Backend &amp; Data" subtitle="Records, permissions, events, and operator tooling." >}}
+	{{< card link="/docs/roadmap/" title="Roadmap" subtitle="What happens next and what remains deferred." >}}
 	{{< /cards >}}
 
 	<div class="sparki-evidence">

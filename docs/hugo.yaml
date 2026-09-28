@@ -27,17 +27,50 @@ enableInlineShortcodes: true
 
 menu:
   main:
-    - name: Documentation
-      pageRef: /docs
+    - name: Home
+      pageRef: /
       weight: 1
+    - name: Start Here
+      pageRef: /docs/start-here
+      weight: 2
+    - name: Product
+      pageRef: /docs/product
+      weight: 3
+    - name: Final Site
+      pageRef: /docs/final-site
+      weight: 4
+    - name: Research & Validation
+      pageRef: /docs/validation
+      weight: 5
     - name: Case Studies
       pageRef: /case-studies
-      weight: 2
+      weight: 6
+    - name: Audiences & Use Cases
+      pageRef: /docs/audiences
+      weight: 7
+    - name: Decisions
+      pageRef: /docs/decisions
+      weight: 8
+    - name: Real MVP
+      pageRef: /docs/mvp
+      weight: 9
+    - name: Backend & Data
+      pageRef: /docs/backend
+      weight: 10
+    - name: Roadmap
+      pageRef: /docs/roadmap
+      weight: 11
+    - name: Go-to-Market
+      pageRef: /docs/go-to-market
+      weight: 12
     - name: Field Notes
       pageRef: /blog
-      weight: 3
+      weight: 13
+    - name: Artifacts
+      pageRef: /docs/artifacts
+      weight: 14
     - name: Search
-      weight: 4
+      weight: 15
       params:
         type: search
 
@@ -46,6 +79,7 @@ params:
   navbar:
     displayTitle: true
     displayLogo: false
+    width: wide
   theme:
     default: light
     displayToggle: true
@@ -66,3 +100,5 @@ params:
       displayPagination: true
   toc:
     displayTags: true
+  page:
+    width: wide
