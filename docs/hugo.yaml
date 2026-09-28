@@ -1,6 +1,7 @@
 baseURL: "http://localhost:1313/"
 title: "Sparki Documentation"
 enableRobotsTXT: true
+enableGitInfo: true
 defaultContentLanguage: en
 
 outputs:
@@ -74,6 +75,21 @@ menu:
       params:
         type: search
 
+  sidebar:
+    - identifier: handoff
+      name: Handoff Areas
+      params:
+        type: separator
+      weight: 1
+    - identifier: glossary
+      name: Glossary
+      pageRef: /glossary
+      weight: 2
+    - identifier: field-notes
+      name: Field Notes
+      pageRef: /blog
+      weight: 3
+
 params:
   description: Sparki product definition, validation, and MVP handoff.
   navbar:
@@ -86,10 +102,18 @@ params:
   search:
     enable: true
     type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
   footer:
     enable: true
     displayCopyright: false
     displayPoweredBy: false
+    width: wide
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+  displayUpdatedAuthor: false
+  externalLinkDecoration: true
   blog:
     list:
       displayTags: true
@@ -102,3 +126,4 @@ params:
     displayTags: true
   page:
     width: wide
+    displayPagination: true
